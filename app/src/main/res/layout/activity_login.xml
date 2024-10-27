@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:background="@color/background">
+
+    <View
+        android:id="@+id/top_window"
+        android:layout_width="0dp"
+        android:layout_height="225px"
+        android:background="@drawable/window"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/navigation_window"
+        android:layout_width="734px"
+        android:layout_height="97px"
+        android:background="@drawable/navigation_window"
+        app:layout_constraintBottom_toBottomOf="@+id/top_window"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_window"
+        app:layout_constraintVertical_bias="1.0"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@+id/top_window"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/top_window"
+        app:layout_constraintTop_toTopOf="@+id/top_window"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <EditText
+        android:id="@+id/email_et"
+        android:layout_width="851px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:backgroundTint="@color/navigation_window"
+        android:fontFamily="@font/ubuntu_light"
+        android:gravity="center"
+        android:hint="ПОЧТА"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/navigation_window"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/navigation_window"
+        app:layout_constraintTop_toBottomOf="@+id/top_window" />
+
+    <EditText
+        android:id="@+id/password_et"
+        android:layout_width="851px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:hint="ПАРОЛЬ"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:backgroundTint="@color/navigation_window"
+        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_et"
+        app:layout_constraintTop_toBottomOf="@+id/email_et" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="520px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circle"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="ВХОД"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/password_et"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
+        app:layout_constraintTop_toBottomOf="@+id/password_et" />
+
+    <Button
+        android:id="@+id/go_to_register_activity_tv"
+        android:layout_width="520px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circle"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Регистрация"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/password_et"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "143561952583",
+    "project_id": "snap-92619",
+    "storage_bucket": "snap-92619.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143561952583:android:91c4d4e32f57ee53b69062",
+        "android_client_info": {
+          "package_name": "com.voste.snap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrEInV3Q-hlZYeQtRqIj_CHGNJ4O4msh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

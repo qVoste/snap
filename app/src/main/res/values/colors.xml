@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#4A5C6A</color>
+    <color name="window">#253745</color>
+    <color name="navigation_window">#1E1E1E</color>
+    <color name="button_light">#9BA8AB</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#2A63F6</color>
+    <color name="light_blue">#C0CCEC</color>
+    <color name="grey">#f3f3f3</color>
+</resources>

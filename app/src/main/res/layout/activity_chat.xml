@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.ChatActivity">
+
+    <!-- RecyclerView для отображения сообщений -->
+
+    <!-- Верхнее окно с заголовком или другой информацией -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_window" />
+
+    <View
+        android:id="@+id/top_window"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@drawable/window"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Окно навигации внутри верхнего окна -->
+    <View
+        android:id="@+id/navigation_window"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:background="@drawable/navigation_window"
+        app:layout_constraintBottom_toBottomOf="@+id/top_window"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_window"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <!-- Круглая иконка внутри верхнего окна -->
+
+    <!-- Поле для ввода сообщения -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@+id/top_window"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/top_window"
+        app:layout_constraintTop_toTopOf="@+id/top_window"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <EditText
+        android:id="@+id/message_et"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle"
+        android:hint="    Введите сообщение..."
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Кнопка для отправки сообщения -->
+    <ImageButton
+        android:id="@+id/send_message_button"
+        android:layout_width="50dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/send_button"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/message_et"
+        app:layout_constraintEnd_toEndOf="@+id/message_et"
+        app:layout_constraintTop_toTopOf="@+id/message_et" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
