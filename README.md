@@ -21,6 +21,6 @@
 
 # Скачать приложение
 
-Чтобы скачать APK файл, перейдите по [этой ссылке](https://github.com/qVoste/snap/Snap.apk).
+Чтобы скачать APK файл, перейдите по [этой ссылке](https://github.com/qVoste/snap/Snap.apk](https://github.com/qVoste/snap/blob/main/Snap.apk)).
 
 
