@@ -21,6 +21,6 @@
 
 # Скачать приложение
 
-##[Скачать APK](https://github.com/qVoste/snap/raw/main/Snap.apk)
+## [Скачать APK](https://github.com/qVoste/snap/raw/main/Snap.apk)
 
 
