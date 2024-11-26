@@ -9,4 +9,8 @@
     <color name="blue">#2A63F6</color>
     <color name="light_blue">#C0CCEC</color>
     <color name="grey">#f3f3f3</color>
+
+    <color name="orange">#F2630D</color>
+    <color name="gray">#CBD2D9</color>
+    <color name="dark_gray">#2A2D32</color>
 </resources>

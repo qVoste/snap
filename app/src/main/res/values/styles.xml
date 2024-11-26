@@ -1,0 +1,28 @@
+<resources>
+    <style name="Theme.Snap" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:navigationBarColor">@color/gray</item>
+        <item name="android:fontFamily">@font/jost_light</item>
+
+    </style>
+
+    <style name="Theme.Snap1" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/dark_gray</item>
+        <item name="android:navigationBarColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/jost_light</item>
+
+    </style>
+
+    <style name="Theme.Snap2" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:navigationBarColor">@color/gray</item>
+        <item name="android:fontFamily">@font/jost_light</item>
+    </style>
+
+</resources>

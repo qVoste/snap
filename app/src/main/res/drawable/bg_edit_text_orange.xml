@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Фон кнопки -->
+    <solid android:color="@color/orange" /> <!-- Цвет кнопки -->
+
+    <!-- Закругленные углы -->
+    <corners android:radius="22dp" />
+
+    <!-- Отступы внутри кнопки -->
+    <padding
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="8dp" />
+</shape>

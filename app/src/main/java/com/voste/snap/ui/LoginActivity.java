@@ -17,12 +17,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        //вход
-        binding.loginBtn.setOnClickListener(v -> {
-            if (binding.emailEt.getText().toString().isEmpty() || binding.passwordEt.getText().toString().isEmpty()){
+
+        binding.loginButton.setOnClickListener(v -> {
+            if (binding.loginEmailEditText.getText().toString().isEmpty() || binding.loginPasswordEditText.getText().toString().isEmpty()){
                 Toast.makeText(getApplicationContext(), "Fields cannot be empty", Toast.LENGTH_SHORT).show();
             }else{
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(binding.emailEt.getText().toString(), binding.passwordEt.getText().toString())
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(binding.loginEmailEditText.getText().toString(), binding.loginPasswordEditText.getText().toString())
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()){
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
-        //переход на регистрацию
-        binding.goToRegisterActivityTv.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
+        binding.backButton.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, ChoiceActivity.class)));
     }
 }

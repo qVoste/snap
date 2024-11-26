@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.ChoiceActivity"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="93dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/icon_logo" />
+
+        <TextView
+            android:id="@+id/nameApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inria_serif_bold"
+            android:gravity="center"
+            android:text="SNAP"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Общайтесь с людьми удобнее"
+        android:textColor="@color/black"
+        android:fontFamily="@font/jost_semi_bold"
+        app:layout_constraintEnd_toEndOf="@+id/avatars_container"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/avatars_container"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/avatars_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/describe"
+        app:layout_constraintVertical_bias="0.032">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="5dp">
+            <ImageView
+                android:id="@+id/circle_gray_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/oguzki_sektant"
+                android:contentDescription="Avatar 1" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="5dp">
+        <ImageView
+            android:id="@+id/circle_gray_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oguzki_ya"
+            android:contentDescription="Avatar 2" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="5dp">
+        <ImageView
+            android:id="@+id/circle_gray_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oguzki_nigga"
+            android:contentDescription="Avatar 3" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="5dp">
+        <ImageView
+            android:id="@+id/circle_gray_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oguzki_kumirka"
+            android:contentDescription="Avatar 4" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="5dp">
+        <ImageView
+            android:id="@+id/circle_gray_5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oguzki_krasavchik"
+            android:contentDescription="Avatar 5" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_button"
+        android:background="@drawable/bg_palka_orange"
+        android:layout_width="261dp"
+        android:layout_height="41dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="52dp"
+        android:padding="8dp"
+        android:text="Регистрация"
+        android:fontFamily="@font/jost_bold"
+        android:textColor="@color/dark_gray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="@+id/login_button"
+        app:layout_constraintStart_toStartOf="@+id/login_button" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:background="@drawable/bg_palka_dark_gray"
+        android:layout_width="261dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="45dp"
+        android:padding="8dp"
+        android:text="Вход"
+        android:textColor="@color/orange"
+        android:fontFamily="@font/jost_bold"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,18 +22,18 @@ public class RegisterActivity extends AppCompatActivity {
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         //регистрация
-        binding.signUpBtn.setOnClickListener(v -> {
-            if (binding.emailEt.getText().toString().isEmpty() || binding.passwordEt.getText().toString().isEmpty()
-                    || binding.usernameEt.getText().toString().isEmpty()){
+        binding.registerButton.setOnClickListener(v -> {
+            if (binding.registerEmailEditText.getText().toString().isEmpty() || binding.registerPasswordEditText.getText().toString().isEmpty()
+                    || binding.registerNicknameEditText.getText().toString().isEmpty()){
                 Toast.makeText(getApplicationContext(), "Fields cannot be empty", Toast.LENGTH_SHORT).show();
             }else{
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(binding.emailEt.getText().toString(), binding.passwordEt.getText().toString())
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(binding.registerEmailEditText.getText().toString(), binding.registerPasswordEditText.getText().toString())
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()){
                                 HashMap<String, String> userInfo = new HashMap<>();
-                                userInfo.put("email", binding.emailEt.getText().toString());
-                                userInfo.put("username", binding.usernameEt.getText().toString());
-                                userInfo.put("profileImage", "");
+                                userInfo.put("email", binding.registerEmailEditText.getText().toString());
+                                userInfo.put("username", binding.registerNicknameEditText.getText().toString());
+                                userInfo.put("profileImage", "");  // или просто оставить поле отсутствующим
                                 userInfo.put("chats", "");
 
                                 FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
@@ -45,6 +45,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
         //переход на вход
-        binding.swithLogin.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this, LoginActivity.class)));
+        binding.backButton.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this, ChoiceActivity.class)));
     }
 }
